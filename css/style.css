@@ -20,6 +20,10 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  max-width: 1121px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 input, button, textarea {
@@ -321,18 +325,7 @@ button:hover {
   }
 }
 
-@media (min-width: 768px) {
-  .services__tabline {
-    margin-top: 32px;
-    padding-left: 24px;
-  }
-}
-@media (min-width: 1120px) {
-  .services__tabline {
-    margin-top: 8px;
-    padding-left: 32px;
-  }
-}
+
 
 @media (min-width: 1120px) {
   .services__btn-box {
@@ -381,3 +374,64 @@ button:hover {
     display: none;
   }
 }
+
+.services__nav {
+  position: relative; }
+.services__nav::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 24px;
+  height: 44px;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0) 100%); }
+
+
+a {
+    background-color: transparent; }
+
+.services-nav {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        padding: 22px 16px;
+        overflow: auto; }
+@media screen and (min-width: 768px) {
+          .services-nav {
+            padding: 28px 24px; } }
+@media screen and (min-width: 1120px) {
+  .services-nav {
+  padding: 8px 32px 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 6px; } }
+.services-nav__link {
+          padding: 8px 16px;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+          font-weight: 500;
+          letter-spacing: -0.2px;
+          color: #7E7E82;
+          text-decoration: none;
+          border-radius: 6px;
+          border: 2px solid transparent; }
+.services-nav__link:active, .services-nav__link--active {
+  border-radius: 6px;
+  border: 2px solid #B8FFEC;
+  background: #FFF; }
+.services-nav__link:hover {
+            color: #1B1C21; }
